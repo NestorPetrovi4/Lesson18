@@ -19,10 +19,10 @@ public class Main {
                 if (!charCount.containsKey(position)) {
                     charCount.put(position, 1);
                 } else {
-                    int sum = charCount.get(position);
-                    charCount.put(position, sum + 1);
-                    max = (sum + 1 > max) ? sum + 1 : max;
-                    min = (sum + 1 < min) ? sum + 1 : min;
+                    int sum = charCount.get(position) + 1;
+                    charCount.put(position, sum);
+                    max = (sum > max) ? sum : max;
+                    min = (sum < min) ? sum : min;
                 }
             }
         }
